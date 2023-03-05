@@ -13,17 +13,21 @@ import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
 import { authorsTableData, projectsTableData } from "@/data";
 import PendingActionsIcon from '@mui/icons-material/PendingActions';
 import AssignmentTurnedInOutlinedIcon from '@mui/icons-material/AssignmentTurnedInOutlined';
+import Modal from "./modal.jsx";
+import { useState } from "react";
 
 export function Tables() {
+  const [showModal, setShowModal] = useState(true);
   return (
     <div className="mt-4 mb-8 flex flex-col gap-4">
+      {showModal? <Modal/> :null}
       <Typography variant="h5" color="blue-gray">
         Pending
       </Typography>
       <Card>
         <CardBody variant="gradient" className="p-4">
-          <div className="pt-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
-            <div className="grid grid-cols-2 gap-5 row-gap-5 sm:grid-cols-3 lg:grid-cols-8">
+          <div className="pt-2">
+            <div className="grid grid-cols-2 gap-5 row-gap-5 sm:grid-cols-3 lg:grid-cols-8 w-full">
               <div className="text-center">
                 <h6 className="mb-2 text-sm font-bold leading-5 tracking-wider">
                   Pending
@@ -73,7 +77,7 @@ export function Tables() {
       </Card>
       <Card>
         <CardBody variant="gradient" className="p-4">
-          <div className="pt-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+          <div className="pt-2">
             <div className="grid grid-cols-2 gap-5 row-gap-5 sm:grid-cols-3 lg:grid-cols-8">
               <div className="text-center">
                 <h6 className="mb-2 text-sm font-bold leading-5 tracking-wider">
@@ -127,7 +131,7 @@ export function Tables() {
       </Typography>
       <Card>
         <CardBody variant="gradient" className="p-4">
-          <div className="pt-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+          <div className="pt-2">
             <div className="grid grid-cols-2 gap-5 row-gap-5 sm:grid-cols-3 lg:grid-cols-8">
               <div className="text-center">
                 <h6 className="mb-2 text-sm font-bold leading-5 tracking-wider">
@@ -175,7 +179,7 @@ export function Tables() {
       </Card>
       <Card>
         <CardBody variant="gradient" className="p-4">
-          <div className="pt-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+          <div className="pt-2">
             <div className="grid grid-cols-2 gap-5 row-gap-5 sm:grid-cols-3 lg:grid-cols-8">
               <div className="text-center">
                 <h6 className="mb-2 text-sm font-bold leading-5 tracking-wider">
@@ -223,7 +227,7 @@ export function Tables() {
       </Card>
       <Card>
         <CardBody variant="gradient" className="p-4">
-          <div className="pt-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+          <div className="pt-2">
             <div className="grid grid-cols-2 gap-5 row-gap-5 sm:grid-cols-3 lg:grid-cols-8">
               <div className="text-center">
                 <h6 className="mb-2 text-sm font-bold leading-5 tracking-wider">
